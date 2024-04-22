@@ -1,25 +1,25 @@
 <div class="flex justify-between items-end">
-  <%= render Vitrail::Title.new.with_content("My app") %>
+  <%= vt_title { "My app" } %>
   <div>
-    <%= render Vitrail::LinkTo.new(:primary, "#").with_content("New user") %>
-    <%= render Vitrail::LinkTo.new(:secondary, "#") do %>
+    <%= vt_link_to(:primary, "#") { "New user" } %>
+    <%= vt_link_to(:secondary, "#") do %>
       <span>Settings</span>
     <% end %>
   </div>
 </div>
 
 <div class="flex space-x-8">
-  <%= render Vitrail::Card.new(title: "Registrations", icon: "user") do %>
+  <%= vt_card(title: "Registrations", icon: "user") do %>
     <p class="text-3xl font-bold font-mono">402</p>
   <% end %>
-  <%= render Vitrail::Card.new(title: "Revenue", icon: "circle-euro") do %>
+  <%= vt_card(title: "Revenue", icon: "circle-euro") do %>
     <p class="text-3xl font-bold font-mono">12&nbsp;345&nbsp;<span class="text-gray-600 text-xl">€</span></p>
   <% end %>
 </div>
 
-<%= render Vitrail::Title.new(level: 2).with_content("User") %>
-<%= render Vitrail::Card.new do %>
-  <%= render Vitrail::Table.new(id: "users", data: { controller: "table" }) do |table| %>
+<%= vt_title(level: 2) { "User" } %>
+<%= vt_card do %>
+  <%= vt_table(id: "users", data: { controller: "table" }) do |table| %>
     <%= table.with_header.with_content("#") %>
     <%= table.with_header.with_content("Name") %>
     <%= table.with_header(class: "!text-right").with_content("Email") %>
