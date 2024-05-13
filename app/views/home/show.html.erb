@@ -1,18 +1,22 @@
 <div class="flex justify-between items-end">
   <%= vt_title { "My app" } %>
   <div>
-    <%= vt_link_to(:primary, "#") { "New user" } %>
-    <%= vt_link_to(:secondary, "#") do %>
+    <%= vt_link_to("New user", "#") %>
+    <%= vt_link_to("#", variant: :destructive) do %>
       <span>Settings</span>
     <% end %>
   </div>
 </div>
 
-<div class="flex space-x-8">
-  <%= vt_card(title: "Registrations", icon: "user") do %>
+<div class="grid grid-cols-5 gap-4" %>
+  <%= vt_card do |card| %>
+    <%# title: "Registrations", icon: "user" %>
+    <% card.with_title { "Registrations" } %>
     <p class="text-3xl font-bold font-mono">402</p>
   <% end %>
-  <%= vt_card(title: "Revenue", icon: "circle-euro") do %>
+  <%= vt_card do |card| %>
+    <%# (title: "Revenue", icon: "circle-euro" %>
+    <% card.with_title { "Revenue" } %>
     <p class="text-3xl font-bold font-mono">12&nbsp;345&nbsp;<span class="text-gray-600 text-xl">€</span></p>
   <% end %>
 </div>

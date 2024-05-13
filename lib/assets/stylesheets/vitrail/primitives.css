@@ -1,0 +1,14 @@
+/* HSL Values from https://tailscan.com/colors */
+:root {
+  --hsl-white: 0, 0%, 100%;
+
+  --hsl-zinc-50: 0, 0%, 98%;
+  --hsl-zinc-100: 240, 5%, 96%;
+  --hsl-zinc-200: 240, 6%, 90%;
+  --hsl-zinc-400: 240, 5%, 65%;
+  --hsl-zinc-500: 240, 4%, 46%;
+  --hsl-zinc-900: 240, 6%, 10%;
+  --hsl-zinc-950: 240, 10%, 4%;
+
+  --hsl-red-600: 0, 72%, 51%;
+}

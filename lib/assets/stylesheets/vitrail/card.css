@@ -1,15 +1,20 @@
-.vt-card--wrapper {
-  @apply border border-slate-200 rounded px-4 py-2 bg-white shadow-sm;
-}
+@layer components {
+  .card {
+    @apply rounded-lg border shadow-sm bg-card text-card-foreground p-6 space-y-4 min-w-fit;
+  }
+  .card > header {
+    @apply flex flex-col space-y-1.5;
+  }
 
-.vt-card--container {
-  @apply flex justify-between items-center mb-2;
-}
+  .card > header > .card--title {
+    @apply text-2xl font-semibold leading-none tracking-tight flex justify-between items-center;
+  }
 
-.vt-card--title {
-  @apply truncate text-sm font-medium text-slate-500;
-}
+  .card > header > .card--description {
+    @apply text-sm text-muted-foreground;
+  }
 
-.vt-card--icon {
-  @apply text-slate-600 ml-2;
+  .card > footer {
+    @apply flex justify-between items-center;
+  }
 }
