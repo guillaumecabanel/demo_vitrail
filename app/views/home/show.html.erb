@@ -1,10 +1,13 @@
 <div class="flex justify-between items-end">
   <%= vt_title { "My app" } %>
   <div>
-    <%= vt_link_to("New user", "#") %>
-    <%= vt_link_to("#", variant: :destructive) do %>
-      <span>Settings</span>
-    <% end %>
+    <%= vt_link_to("Default", "#") %>
+    <%= vt_link_to("Destructive", "#", variant: :destructive) %>
+    <%= vt_link_to("Outline", "#", variant: :outline) %>
+    <%= vt_link_to("Secondary", "#", variant: :secondary) %>
+    <%= vt_link_to("Ghost", "#", variant: :ghost) %>
+    <%= vt_link_to("Link", "#", variant: :link) %>
+
   </div>
 </div>
 

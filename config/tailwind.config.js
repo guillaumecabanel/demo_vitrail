@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+/** @type {import('tailwindcss').Config} */
 
 module.exports = {
   content: [
@@ -11,37 +11,41 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter var', 'sans-serif'],
       },
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        border: "hsl(var(--hsl-zinc-200) / <alpha-value>)",
+        input: "hsl(var(--hsl-zinc-200) / <alpha-value>)",
+        ring: "hsl(var(--hsl-zinc-400) / <alpha-value>)",
+        background: "hsl(var(--hsl-white) / <alpha-value>)",
+        foreground: "hsl(var(--hsl-zinc-950) / <alpha-value>)",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "hsl(var(--hsl-zinc-900) / <alpha-value>)",
+          foreground: "hsl(var(--hsl-zinc-50) / <alpha-value>)",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "hsl(var(--hsl-zinc-100) / <alpha-value>)",
+          foreground: "hsl(var(--hsl-zinc-900) / <alpha-value>)",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive) / <alpha-value>)",
-          foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
+          DEFAULT: "hsl(var(--hsl-red-600) / <alpha-value>)",
+          foreground: "hsl(var(--hsl-zinc-50) / <alpha-value>)",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "hsl(var(--hsl-zinc-100) / <alpha-value>)",
+          foreground: "hsl(var(--hsl-zinc-500) / <alpha-value>)",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "hsl(var(--hsl-zinc-100) / <alpha-value>)",
+          foreground: "var(--hsl-zinc-900) / <alpha-value>)",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--hsl-white) / <alpha-value>)",
+          foreground: "hsl(var(--hsl-zinc-950) / <alpha-value>)",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "hsl(var(--hsl-white) / <alpha-value>)",
+          foreground: "hsl(var(--hsl-zinc-950) / <alpha-value>)",
         },
       },
     },
